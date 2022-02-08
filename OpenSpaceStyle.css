@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+.space {
+    background: url("space.png") fixed;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.planet-area {
+    height: 100vh;
+    width: 50vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.planet {
+    bottom: -1%;
+    left: -1%;
+    width: 50vmin;
+    position: absolute;
+}
+
+.rocket {
+    bottom: 25vmin;
+    left: 17vmin;
+    height: 15vmin;
+    position: absolute;
+    transform: rotate(10deg);
+}
+
+.control-panel {
+    background-image: repeating-linear-gradient(45deg, yellow, yellow 2%, black 2%, black 4% );
+    position: absolute;
+    left: 50vmin;
+    top: 35vmin;
+    width: 50vmin;
+}
+
+.control-panel__inner {
+    background-color: #222;
+    margin: 2vmin;
+    padding: 3vmin 0;
+}
+
+.check-buttons,
+.levers {
+    display: flex;
+    height: 10vmin;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+input[type='range'] {
+    width: 9vmin;
+    transform: rotate(-90deg);
+}
+
+input[type='password'] {
+    background-color: #222;
+    border: 2px solid yellow;
+    border-radius: 4px;
+    color: lime;
+}
+
+input[value='OK'] {
+    background-color: yellow;
+    border: 2px solid;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+input[value='OK']:hover:not(:disabled) {
+    background-color: orangered;
+    color: white;
+}
+
+input[value='Launch'] {
+    background-color: red;
+    border: 1px solid;
+    border-radius: 50%;
+    box-shadow: 0 4px gray;
+    color: white;
+    height: 10vmin;
+    width: 10vmin;
+    margin-top: 2vmin;
+}
+
+input[value='Launch']:active {
+    box-shadow: 0 1px gray;
+    transform: translate(0, 3px);
+}
+
+input[value='Launch']:disabled {
+    background-color: #F99;
+}
